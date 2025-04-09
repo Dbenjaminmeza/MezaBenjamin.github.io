@@ -96,7 +96,7 @@ img {
 
 .presentacion{
     /* outline: 1px solid rgb(156, 156, 17);  */
-    background-image: url(img/profile/imagen\ proyecto.jpg);
+    background-image: url(assets/img/profile/pexels-pavel-danilyuk-5496459.jpg);
     background-size: cover;
     background-position: right;
     margin-top: 0;
