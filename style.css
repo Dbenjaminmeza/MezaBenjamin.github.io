@@ -322,6 +322,8 @@ a.cv:hover {
 .enlaces__item {
     text-align: left;
     list-style: none;
+    position: relative;
+    display: inline-block;
 }
 
 .enlaces__enlace {
@@ -336,11 +338,35 @@ a.cv:hover {
     font-weight: var(--texto-peso-fino);
 }
 
+.enlaces__enlace_footer:hover{
+    filter: drop-shadow(0px 0px 3px var(--fondo-primario));
+}
+
 .enlaces__icono {
     width: 35px;
     aspect-ratio: 1;
     filter: drop-shadow(0px 0px 2px var(--texto-primario));
 }
+
+.nombre_redes{
+    position: absolute;
+    bottom: -50px; 
+    left: 20%; 
+    transform: translateX(-50%); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    white-space: nowrap; 
+}
+
+.enlaces__item:hover .nombre_redes{
+    opacity: 1;
+    height: 35%;
+    background-color: aliceblue;
+    border-radius: 30px;
+    width: 80%;
+    text-align: center;
+}
+
 
 /*------------------------------------------------- pie de pagina-------------------------------------------------*/
 
