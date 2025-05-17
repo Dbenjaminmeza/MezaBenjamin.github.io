@@ -4,7 +4,7 @@
     --texto-secundario: #000000;
     --fondo-primario: #020801;
     --fondo-primario-transparente: #097517;
-    --fondo-secundario:rgb(70, 71, 70);
+    --fondo-secundario:rgb(15, 17, 15);
     --color-primario:rgb(9, 71, 25);
     --color-primario-apagado: #003d08;
     --color-secundario: #0c4104;
@@ -28,11 +28,12 @@ body{
     margin: 0;
     /* outline: 1px solid rgb(223, 223, 45); */
     font-family: sans-serif;
+    background-color: var(--texto-secundario);
 }
 
 header{
     /* outline: 1px solid rgb(223, 223, 45); */
-    background-color: var(--fondo-primario);
+    background-color: var(--texto-secundario);
     margin: 0;
     padding: 0;
     width: 100%;
@@ -48,11 +49,9 @@ header{
     width: 100%;
     list-style: none;
     padding: 0;
-    background-color: transparent;
     line-height: 40px;
     border-radius: 20px;
-    text-align: right;
-    
+    text-align: right; 
 }
 
 li{
@@ -156,6 +155,7 @@ a.cv:hover {
     text-align: center;
     align-items: center;
     outline: 1px solid rgb(0, 155, 46);
+    width: 100%;
     gap: 80px;
 }
 
@@ -173,9 +173,36 @@ a.cv:hover {
     align-content: center;
     text-align: center;
     font-size: var(--texto-peso-fino);
-    background-color: var(--fondo-primario-transparente);
+    background: linear-gradient(
+        180deg,
+        var(--fondo-primario-transparente) 0%,
+        var(--color-primario) 90%
+      );
 }
 
+
+.lista_stacks{
+  display: grid;
+  grid-template-columns: repeat(3 , 15%);
+  grid-template-rows: repeat(1 , 2fr);
+  height: 100px;
+  padding-left: 33%;
+  gap: 30px;
+}
+#text_mis_hibies{
+    color: var(--fondo-secundario);
+    filter: drop-shadow(0px 0px 1px var(--texto-primario));
+}
+.elementos_stack{
+    display: flex;
+}
+.icono_stack{
+    display: flex;
+    height: 50px;
+    width: 50px; 
+    border-radius: 0;
+    filter: drop-shadow(0px 0px 1px var(--texto-primario));
+}
 
 /*------------------------------------------------- un poco de mi-------------------------------------------------*/
 .titulo{
@@ -370,26 +397,37 @@ a.cv:hover {
 
 /*------------------------------------------------- pie de pagina-------------------------------------------------*/
 
-@media (max-width:800px){
+@media (max-width:1105px){
     .mi_historia_ambos{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+        grid-template-rows: repeat(1 , 1fr);
+        text-align: center;
+        align-items: center;
     }
 }
-@media (max-width:1159px){
+@media (max-width:500px){
+    .lista_stacks{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        padding-left: 10%;
+        text-align: center;
+    }
+}
+@media (max-width:1174px){
     .seccion_de_proyectos{
         height: auto;
     }
 }
 
-@media (max-width:1159px){
+@media (max-width:1174px){
     .mis_proyectos{
         display: flex;
         flex-direction: column;
     }
 }
 
-@media (max-width: 966px) {
+@media (max-width: 1070px) {
     .presentacion_miarticulo {
         flex-direction: column-reverse;
         align-items: center;
@@ -411,5 +449,12 @@ a.cv:hover {
         margin-left: 0;
         width: 200px;
         height: auto;
+    }
+}
+@media (max-width: 1009px){
+    .pie_de_pagina{
+        display: grid;
+        grid-template-columns: repeat(1, 50%);
+        grid-template-rows: repeat(1, 3fr);
     }
 }
