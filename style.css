@@ -453,7 +453,7 @@ a.cv:hover {
 @media (max-width:685px){
     .seccion_de_certificados{
     height: 700px;
-}
+    }
     .contenedor_de_certificados{
         display: grid;
         grid-template-columns: repeat(1,1fr);
