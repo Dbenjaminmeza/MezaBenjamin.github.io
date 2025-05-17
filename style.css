@@ -30,7 +30,7 @@ body{
     font-family: sans-serif;
     background-color: var(--texto-secundario);
 }
-
+/*----------------------------------------barra de navegacion-------------------------------------------*/
 header{
     /* outline: 1px solid rgb(223, 223, 45); */
     background-color: var(--texto-secundario);
@@ -77,7 +77,7 @@ a.navegacion:hover {
 } 
 /* color negro al acercar el mouse */
 
-/*------------------------------------hasta aca tenemos la barra de navegacion---------------------------*/
+/*------------------------------------------------intro--------------------------------------------------*/
 
 #nombre {
     color: rgb(8, 197, 109);
@@ -138,7 +138,7 @@ a.cv:hover {
     color: rgb(0, 0, 0);
 } /* color negro al acercar el mouse*/
 
-/*-------------------------------------------------intro-------------------------------------------------*/
+/*-------------------------------------------------un poco de mi-------------------------------------------------*/
 .mi_historia{
     display: flex;
     align-items: center;
@@ -204,7 +204,7 @@ a.cv:hover {
     filter: drop-shadow(0px 0px 1px var(--texto-primario));
 }
 
-/*------------------------------------------------- un poco de mi-------------------------------------------------*/
+/*------------------------------------------------- mis proyectos-------------------------------------------------*/
 .titulo{
     margin-top: 50px;
     font-size: 2rem;
@@ -218,7 +218,7 @@ a.cv:hover {
     background: #f000;
     color: var(--texto-primario);
     background-color: var(--fondo-primario);
-    height: 800px ;
+    height: 600px ;
 }
 .mis_proyectos{
     display: grid;
@@ -286,8 +286,31 @@ a.cv:hover {
 }
 
 
-/*------------------------------------------------- mis proyectos-------------------------------------------------*/
+/*------------------------------------------------- Certidficados-------------------------------------------------*/
 
+.seccion_de_certificados{
+    display: flex;
+    color: #dddddd;
+    flex-direction: column;
+    text-align: center;
+    height: 500px;
+    background-color: var(--fondo-primario);
+}
+.contenedor_de_certificados{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    margin-top: 40px;
+}
+.imagen_certificados{
+    height: 200px;
+    width: 300px;
+}
+.imagen_certificados:hover{
+    height: 210px;
+    width: 310px;
+}
+
+/*------------------------------------------------- pie de pagina-------------------------------------------------*/
 .pie_de_pagina {
     width: 100%;
     display: flex;
@@ -395,7 +418,7 @@ a.cv:hover {
 }
 
 
-/*------------------------------------------------- pie de pagina-------------------------------------------------*/
+/*------------------------------------------------- responsive-------------------------------------------------*/
 
 @media (max-width:1105px){
     .mi_historia_ambos{
@@ -424,6 +447,17 @@ a.cv:hover {
     .mis_proyectos{
         display: flex;
         flex-direction: column;
+    }
+}
+
+@media (max-width:685px){
+    .seccion_de_certificados{
+    height: 700px;
+}
+    .contenedor_de_certificados{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
     }
 }
 
